@@ -7,7 +7,9 @@ import (
 
 // func RemoveDuplicates(inputData interface{}) (result interface{}, err error)
 func TestQuestion1_RemoveDuplicates_1(t *testing.T) {
-	//  NOTE: since the conversion is tested below, we just need to make sure that the interface{} declaration is working properly
+	//  NOTE: since the conversions are tested below, we just need to make sure that the interface{} declaration is working properly. this is done
+	//        by the multiple test functions denoted by "_#". I think I could combine these tests if I use the "interface{}" type but it would take
+	//        more time to debug it than I have for this test.
 	tests := []struct {
 		testName       string
 		givenInput     []int

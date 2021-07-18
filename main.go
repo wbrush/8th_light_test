@@ -53,8 +53,10 @@ for more information about generating swagger.json from comments, see:
 
 import (
 	"github.com/sirupsen/logrus"
+	"github.com/wbrush/8th_light_test/models"
 	"github.com/wbrush/8th_light_test/question1"
 	"github.com/wbrush/8th_light_test/question2"
+	"github.com/wbrush/8th_light_test/question3"
 )
 
 var (
@@ -82,5 +84,19 @@ func main() {
 		"ResultQ2": ResultQ2,
 		"ErrQ2":    ErrQ2,
 	}).Debug("Question2 Answers")
+
+	DataQ3_ids := []string{"7-623", "8235", "8-235"}
+	DataQ3_specialties := []models.Specialty{
+		{Id: 1381, Name: "front-end web development"},
+		{Id: 8235, Name: "data engineering"},
+		{Id: 3434, Name: "API design"},
+		{Id: 7623, Name: "security"},
+		{Id: 9153, Name: "UX"},
+	}
+	ResultQ3, ErrQ3 := question3.GetSpecialty(DataQ3_ids, DataQ3_specialties)
+	logrus.WithFields(logrus.Fields{
+		"ResultQ3": ResultQ3,
+		"ErrQ3":    ErrQ3,
+	}).Debug("Question3 Answers")
 
 }
