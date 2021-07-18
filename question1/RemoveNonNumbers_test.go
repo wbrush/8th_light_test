@@ -46,6 +46,7 @@ func TestQuestion1_RemoveNonNumbers(t *testing.T) {
 			expectedOutput: "12345",
 			processError:   nil,
 		},
+		//  note: since we have a static regexp string, I'm not sure how to generate a test that returns an error. if this is changed to pass in the regexp, this should be possible and added at that time
 	}
 
 	for _, tt := range tests {
