@@ -4,7 +4,8 @@ This service was written as a take home coding test for a position at 8th Light.
 ## Test Status
 
 ### Coding Status
-Completed all coding challenges. 
+Completed all coding challenges. However if this code were to be used in a production environment, I would curious about the performance and memory requirements of some of the code. Therefore ideally,
+ I would add performance benchmarks to the code which I didn't have time to include here.
 
 ### Question Status
 Question answer is included here.
@@ -55,7 +56,7 @@ Framework for logging.
 go get -u github.com/sirupsen/logrus
 
 ## Process
-This would spell out the deployment steps once developed and tested.
+This would spell out the deployment steps once developed and tested. I would expect this to be a stand alone microservice. I considered serverless but I don't think it would be good to implement it using serverless, especially considering questions 2 & 3.
 
 ## Running locally
 To run this locally, you would need to have the go compiler installed. I can add the windows executable to the repo if needed. To run locally:
